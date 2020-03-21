@@ -1,0 +1,95 @@
+{% load staticfiles %}
+<div class="Bottom002370">
+    <div class="bottom">
+        <div class="auto auto_1200 clearfix">
+            <nav>
+                <ul class="ul clearfix">
+                    <li>
+                        <h3>
+                           <a href='{% url "about_house" %}'>关于我们</a>
+                        </h3>
+                        <dl>
+                            <dd><a href='{% url "about_house" %}'>猫舍简介</a></dd>
+                            <dd><a href='{% url "about_idea" %}'>我们的理念</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "cat_parents" %}'>种猫介绍</a></h3>
+                        <dl>
+                            <dd> <a href='{% url "cat_parents" %}'>爸爸妈妈</a> </dd>
+                            <dd> <a href='{% url "cat_certificate" %}'>种猫证书</a> </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "for_sale" %}'>购买小猫</a></h3>
+                        <dl>
+                            <dd><a href='{% url "for_sale" %}'>待售小猫</a></dd>
+                            <dd><a href='{% url "breed_plan" %}'>繁育计划</a></dd>
+                            <dd><a href='{% url "price_range" %}'>定价范围</a></dd>
+                            <dd><a href='{% url "pedigree_and_health" %}'>血统及健康</a></dd>
+                            <dd><a href='{% url "purchase_process" %}'>购买流程</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "color_suit" %}'>了解布偶</a></h3>
+                        <dl>
+                            <dd><a href='{% url "color_suit" %}'>颜色及花色</a></dd>
+                            <dd><a href='{% url "cat_profile" %}'>布偶猫简介</a></dd>
+                            <dd><a href='{% url "breed_history" %}'>繁育历史</a></dd>
+                            <dd><a href='{% url "phase_identification" %}'>品相鉴别</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "history_pictures" %}'>图片展览</a></h3>
+                        <dl>
+                            <dd>
+                                <a href='{% url "history_pictures" %}'><i></i>历史图片</a>
+                            </dd>
+
+                            <dd>
+                                <a href='{% url "cat_new_home" %}'><i></i>猫咪在新家</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "find_normal_house" %}'>养猫学院</a></h3>
+                        <dl>
+                            <dd>
+                                <a href='{% url "find_normal_house" %}'><i></i>寻找正规猫舍</a>
+                            </dd>
+                            <dd>
+                                <a href='{% url "diet_manger" %}'><i></i>饮食管理</a>
+                            </dd>
+                            <dd>
+                                <a href='{% url "behave_living" %}'><i></i>行为起居</a>
+                            </dd>
+                            <dd>
+                                <a href='{% url "health_disease" %}'><i></i>保健与疾病</a>
+                            </dd>
+                            <dd>
+                                <a href='{% url "others" %}'><i></i>其他分享</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><a href='{% url "contact" %}'>联系我们</a></h3>
+                    </li>
+                </ul>
+            </nav>
+            <div class="QRcode"><img src="{% static '/picture/201812121122292229.jpg' %}">
+                <span>- 了解更多 -</span>
+            </div>
+            <div class="contact">
+                <p>
+                    私人微信: 123456<br>
+                    微信公众号: 122222<br>
+                    新浪微博：eeeeeee<br>
+                    联系电话：（+86）136 1126 7041<br>
+                    邮箱：DollGarden@qq.com<br>
+                    繁育人：Bella
+                </p>
+            </div>
+        </div>
+    </div>
+    {% include 'layout/footer.html' %}
+</div>

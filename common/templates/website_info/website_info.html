@@ -1,0 +1,29 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/website_info_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location"><a href='{% url "index" %}'>首页</a> <a href='{% url "legal_notices" %}'>其他栏目</a> <span>法律声明</span></div>
+        <div class="menu">
+            <ul class="ul">
+                <li id="legal_notices"><a class="select" href='{% url "legal_notices" %}'><i></i>法律声明</a></li>
+                <li id="friends_link"><a class="select" href='{% url "friends_link" %}'><i></i>友情链接</a></li>
+                <li id="website_map"><a class="select" href='{% url "website_map" %}'><i></i>网站地图</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+		;
+		(function($, window, document) {
+			function Menu002290(elem) {
+				var elem = $(elem);
+			}
+		Menu002290(".Menu002290");
+	</script>
+</div>
+{% block website_info%}
+{% endblock %}
+{% endblock %}

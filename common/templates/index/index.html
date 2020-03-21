@@ -1,0 +1,73 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/index_banner.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="Floor002578">
+    <div class="auto auto_1200">
+        <div class="title">
+            <aside>Our philosophy</aside>
+            我们的理念
+        </div>
+        <div class="edit-info auto">
+            <div>
+	            <p>承载保护纯种猫血统之使命，给我们的宠物更优质的生活。</p>
+	            <p>让更多的普通家庭能够拥有好而不贵、物超所值的宠物和服务。</p>
+            </div>
+        </div>
+        <div class="more">
+            <a href='{% url "about_idea" %}'>了解我们</a>
+        </div>
+    </div>
+</div>
+
+<div class="nr">
+    <div class="auto auto_1200">
+        <div class="b">
+            <a href='{% url "purchase_process" %}'>
+                <div class="inner">
+                    <div class="pic"> <img src='{% static "picture/20181119112603263.jpg" %}'></div>
+                    <div class="gm">
+                        <h2>购买流程</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="b">
+            <a href='{% url "pedigree_and_health" %}'>
+                <div class="inner">
+                    <div class="pic"> <img src='{% static "picture/201811191125502550.jpg" %}'></div>
+                    <div class="gm">
+                        <h2>血统及健康保障</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="clesr"></div>
+    </div>
+</div>
+
+<div class="Floor002143" data-role="part">
+    <div class="title">
+        <aside>Happy cats</aside>
+        快乐的猫咪们
+    </div>
+    <div class="auto">
+        <aside class="click"></aside>
+        <aside class="pic">
+            <img src='{% static "picture/20181119112908298.jpg" %}'>
+            <img src='{% static "picture/20181119112908298.jpg" %}' class="phone">
+        </aside>
+        <aside class="file"> </aside>
+        <script>
+            $(".Floor002143 .click").click(function(e) {
+                $(".Floor002143 .file").show();
+                $(".Floor002143 .file").html('<video src="/uploadfiles/2018/11/201811191129172917.mp4" controls autoplay></video>');
+            });
+        </script>
+    </div>
+</div>
+{% endblock %}

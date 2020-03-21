@@ -1,0 +1,37 @@
+{% extends "cat_breed/cat_breed.html" %}
+{% block cat_breed%}
+<div class="some_info">
+	<div class="auto auto_1200">
+        <div class="Floor001362" data-role="part">
+            <div class="auto">
+                <ul class="ul">
+                    <li>
+                        <a href='{% url "cat_parents_detail" %}'>
+                            <img class="pic" src="../static/picture/201908292019521952.jpg">
+                        </a>
+                        <div class="icon">
+                            <h5 class="dot">Yummy - 海豹双色 | boy -</h5>
+                            <a href='{% url "cat_parents_detail" %}'>了解更多</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="Page002545">
+                <div class='Pages'>
+                    <span class='p_page'>
+                        <a href='javascript:void(0);' class='a_first'>第一页</a>
+                        <a href='javascript:void(0);' class='a_prev'>上一页</a>
+                        <em class="num">
+                            <a href='list_4_page_1.html' class='a_cur' id='pageNum1'>1</a><a href='list_4_page_2.html' class='a_num' id='pageNum2'>2</a>
+                        </em>
+                        <a href='list_4_page_2.html' class='a_next'>下一页</a>
+                        <a href='list_4_page_2.html' class='a_end'>最后一页</a>
+                    </span>
+                </div>
+            <script type='text/javascript'> function redirectPage_(inputID){var inputValue = document.getElementById(inputID).value;     if(!(/^\d+$/).test(inputValue)){ document.getElementById(inputID).value = '1'; return; }      if(inputValue <= 0) { inputValue = 1; }      if(inputValue > 2) { inputValue = 2; }      location.href = '/bbmm/list_4_page_{$wtl_pager}.html'.replace('{$wtl_pager}', inputValue); } </script>
+        </div>
+    </div>
+</div>
+{% endblock %}

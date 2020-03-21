@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/buy_cat_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location"><a href='{% url "index" %}'>首页</a>  <a href='{% url "for_sale" %}'>购买小猫</a> <span>待售小猫</span></div>
+        <div class="menu">
+            <ul class="ul">
+                <li id="for_sale"><a href='{% url "for_sale" %}'><i></i>待售小猫</a></li>
+                <li id="breed_plan"><a href='{% url "breed_plan" %}'><i></i>繁育计划</a></li>
+                <li id="price_range"><a href='{% url "price_range" %}'><i></i>定价范围</a></li>
+                <li id="pedigree_and_health"><a href='{% url "pedigree_and_health" %}'><i></i>血统及健康保障 </a></li>
+                <li id="purchase_process"><a href='{% url "purchase_process" %}'><i></i>购买流程</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+		;
+		(function($, window, document) {
+			function Menu002290(elem) {
+				var elem = $(elem);
+			}
+		Menu002290(".Menu002290");
+	</script>
+</div>
+{% block buy_cat%}
+{% endblock %}
+{% endblock %}

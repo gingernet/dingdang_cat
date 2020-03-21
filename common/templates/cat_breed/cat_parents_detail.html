@@ -1,0 +1,109 @@
+{% extends "cat_breed/cat_breed.html" %}
+{% block cat_breed%}
+<div class="some_info">
+	<div class="auto auto_1200">
+        <div class="Floor002084" data-role="part">
+                <div class="auto">
+                    <div class="word">
+                        <div class="info">
+                            <h2>>Sophia</h2>
+                            <h3>
+                                <p style="margin:0px;">
+                                    <span style="color:#666666;font-family:宋体;font-size:16px;"><span style="color:#666666;font-size:16px;">-遗传病HCM&amp;PKD检测：阴性&nbsp;</span></span>
+                                </p>
+                                <p style="margin:0px;">
+                                    <span style="color:#666666;font-family:宋体;font-size:16px;"><span style="color:#666666;font-size:16px;">-索菲亚来自美国知名猫舍，该猫舍繁育人非常注重眼睛的繁育方向，所以sophia拥有如此美丽的眼睛。此外她饱满的嘴套，整体五官美丽大方，在评分标准之外有着自己特别的特点和气质，加上稀有的奶油色，更显仙女般的气质。</span></span>
+                                </p>
+                                <p style="margin:0px;">
+                                    <span style="color:#666666;font-family:宋体;font-size:16px;"><span style="color:#666666;font-size:16px;">-sophia是最好抱的一只小猫，她会安静地趴在你的怀里，脑袋放松地落在你的胳膊肘里，双耳趴下来，眼睛半眯着享受着你的抚摸，像个孩子依偎在父母的怀里，信任、温暖、可爱。当了妈妈后仍然可以做回一个天真无邪的孩子。</span></span>
+                                </p>
+                            </h3>
+                            <pre></pre>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!--star-->
+                        <div class="design float">
+                            <ul class="ul">
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/201901111959585958.jpg );">
+                                        	<img src="../static/picture/201901111959585958.jpg">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/2019011120000000.jpg );">
+                                        	<img src="../static/picture/2019011120000000.jpg">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/2019011120000202.jpg );">
+                                        	<img src="../static/picture/2019011120000202.jpg">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/2019011120000303.jpg );">
+                                        	<img src="../static/picture/2019011120000303.jpg">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/2019011120000505.jpg );">
+                                        	<img src="../static/picture/2019011120000505.jpg">
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/2019011120000606.jpg );">
+                                        	<img src="../static/picture/2019011120000606.jpg">
+                                        </div>
+                                    </li>
+
+                            </ul>
+                            <div class="pager">
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='0' style="background-image:url(../static/image/201901111959585958.jpg);"><img src="../static/picture/201901111959585958.jpg"></a>
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='1' style="background-image:url(../static/image/2019011120000000.jpg);"><img src="../static/picture/2019011120000000.jpg"></a>
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='2' style="background-image:url(../static/image/2019011120000202.jpg);"><img src="../static/picture/2019011120000202.jpg"></a>
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='3' style="background-image:url(../static/image/2019011120000303.jpg);"><img src="../static/picture/2019011120000303.jpg"></a>
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='4' style="background-image:url(../static/image/2019011120000505.jpg);"><img src="../static/picture/2019011120000505.jpg"></a>
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='5' style="background-image:url(../static/image/2019011120000606.jpg);"><img src="../static/picture/2019011120000606.jpg"></a>
+
+                            </div>
+                        </div>
+                        <!--end-->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $(".Floor002084 .pager a").each(function(index) {
+                            $(this).addClass("a_" + index);
+                            if (index == 0) {
+                                $(this).hide();
+                            }
+                        });
+                        $('.Floor002084 .box ul').bxSlider({
+                            auto: true,
+                            loop:true,
+                            pagerCustom: '.Floor002084 .box .pager',
+                            nextText: '<span class="glyphicon glyphicon-menu-right"></span>',
+                            prevText: '<span class="glyphicon glyphicon-menu-left"></span>',
+                            speed: 500
+                        });
+                    });
+
+                </script>
+            </div>
+    </div>
+</div>
+
+{% endblock %}

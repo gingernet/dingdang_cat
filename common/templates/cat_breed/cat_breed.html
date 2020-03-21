@@ -1,0 +1,28 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/cat_breed_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location"><a href='{% url "index" %}'>首页</a><a href='{% url "cat_parents" %}'>种猫介绍</a> <span>爸爸妈妈</span></div>
+        <div class="menu">
+            <ul class="ul">
+                <li id="cat_parents"><a href='{% url "cat_parents" %}'><i></i>爸爸妈妈</a></li>
+                <li id="cat_certificate"><a href='{% url "cat_certificate" %}'><i></i>种猫证书</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        ;
+        (function($, window, document) {
+            function Menu002290(elem) {
+                var elem = $(elem);
+            }
+        Menu002290(".Menu002290");
+    </script>
+</div>
+{% block cat_breed%}
+{% endblock %}
+{% endblock %}

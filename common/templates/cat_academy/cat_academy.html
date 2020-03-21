@@ -1,0 +1,47 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/cat_academy_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location"><a href='{% url "index" %}'>首页</a>  <a href='{% url "find_normal_house" %}'>养猫学院</a> <span id="CategorySpanID">养猫学院</span></div>
+            <script type="text/javascript" language="javascript">
+                $(document).ready(function(e){
+                    if(jQuery("#menuId" + menuid).html() !="" && jQuery("#menuId" + menuid).html() != null)
+                    jQuery("#CategorySpanID").html(jQuery("#menuId" + menuid).find('a').html());
+                    })
+            </script>
+            <div class="menu">
+                <ul class="ul">
+                    <li id="find_normal_house">
+                        <a href='{% url "find_normal_house" %}'><i></i>寻找正规猫舍</a>
+                    </li>
+                    <li id="diet_manger">
+                        <a href='{% url "diet_manger" %}'><i></i>饮食管理</a>
+                    </li>
+                    <li id="behave_living">
+                        <a href='{% url "behave_living" %}'><i></i>行为起居</a>
+                    </li>
+                    <li id="health_disease">
+                        <a href='{% url "health_disease" %}'><i></i>保健与疾病</a>
+                    </li>
+                    <li id="others">
+                        <a href='{% url "others" %}'><i></i>其他分享</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <script>
+		;
+		(function($, window, document) {
+			function Menu002290(elem) {
+				var elem = $(elem);
+			}
+		Menu002290(".Menu002290");
+	</script>
+</div>
+{% block cat_academy%}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "website_info/website_info.html" %}
+{% block website_info%}
+    <div class="some_info">
+	<div class="auto auto_1200">
+        <div class="i_list">
+            <ul>
+
+                    <li class="link">
+                        <a href='' target="_blank"><img src="../static/picture/201811191116121612.jpg">测试</a> </li>
+
+                    <li class="link">
+                        <a href='' target="_blank"><img src="../static/picture/201811191116121612.jpg">测试</a> </li>
+
+            </ul>
+            <script type="text/javascript">
+                jQuery(".i_list ul li.link").each(function(i){
+                    if( ( i + 1 ) % 4 == 0 ){
+                        jQuery(this).css("margin-right",0);
+                    }
+                });
+            </script>
+            <div class="clear"></div>
+            <!--Pages-->
+            <div class="Page002545">
+
+                    <div class='Pages'>
+                        <span class='p_page'>
+                            <a href='javascript:void(0);' class='a_first'>第一页</a>
+                            <a href='javascript:void(0);' class='a_prev'>上一页</a>
+                            <em class="num">
+                                <a href='index_19_page_1.html' class='a_cur' id='pageNum1'>1</a>
+                            </em>
+                            <a href='javascript:void(0);' class='a_next'>下一页</a>
+                            <a href='javascript:void(0);' class='a_end'>最后一页</a>
+                        </span>
+                    </div>
+                <script type='text/javascript'> function redirectPage_(inputID){      var inputValue = document.getElementById(inputID).value;     if(!(/^\d+$/).test(inputValue)){ document.getElementById(inputID).value = '1'; return; }      if(inputValue <= 0) { inputValue = 1; }      if(inputValue > 1) { inputValue = 1; }      location.href = '/yqlj/index_19_page_{$wtl_pager}.html'.replace('{$wtl_pager}', inputValue); } </script>
+            </div>
+            <!--Pages-->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

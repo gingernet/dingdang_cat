@@ -1,0 +1,41 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/understand_cat_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location"><a href='{% url "index" %}'>首页</a>
+            <a href='{% url "history_pictures" %}'>图片展览</a>
+            <span id="CategorySpanID">图片展览</span>
+        </div>
+        <script type="text/javascript" language="javascript">
+			$(document).ready(function(e){
+				if(jQuery("#{{ focus_point }}").html() !="" && jQuery("#{{ focus_point }}").html() != null)
+				jQuery("#CategorySpanID").html(jQuery("#{{ focus_point }}").find('a').html());
+				})
+		</script>
+        <div class="menu">
+            <ul class="ul">
+                <li id="history_pictures">
+                    <a href="{% url "history_pictures" %}"><i></i>历史图片</a>
+                </li>
+                <li id="cat_new_home">
+                    <a href="{% url "cat_new_home" %}"><i></i>猫咪在新家</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+		;
+		(function($, window, document) {
+			function Menu002290(elem) {
+				var elem = $(elem);
+			}
+		Menu002290(".Menu002290");
+	</script>
+</div>
+{% block cat_show%}
+{% endblock %}
+{% endblock %}

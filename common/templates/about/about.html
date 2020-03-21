@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% load staticfiles%}
+{% block banner%}
+{% include 'banner/about_banner.html' %}
+{% endblock %}
+{% block content %}
+<div class="Menu002290" data-role="part">
+    <div class="auto auto_1200">
+        <div class="location">
+            <a href='{% url "index" %}'>首页</a>
+            <a href='{% url "about_house" %}'>关于DollGarden</a>
+            <span>猫舍简介</span></div>
+        <div class="menu">
+        <ul class="ul">
+            <li id="about_house"><a href='{% url "about_house" %}'><i></i>猫舍简介</a></li>
+            <li id="about_idea"><a href='{% url "about_idea" %}'><i></i>我们的理念</a></li>
+        </ul>
+        </div>
+    </div>
+    <script>
+		(function($, window, document) {
+            function Menu002290(elem) {
+                var elem = $(elem);
+            }
+            Menu002290(".Menu002290");
+        })
+	</script>
+</div>
+{% block about%}
+{% endblock %}
+{% endblock %}

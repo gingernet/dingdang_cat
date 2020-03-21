@@ -1,0 +1,179 @@
+{% load staticfiles %}
+<div class="Top002434 Public_nav_style ">
+    <header class="header auto auto_1200 clearfix">
+        <div class="header-left"> <a href='../Index.html' class="logo"><img src='{% static "image/12.jpg" %}' style="width:130px;height:90px;" alt=""></a> </div>
+        <div class="header-mid">
+            <div id="open_menu"><i></i></div>
+            <nav class="header-menu clearfix sub-vertical">
+                <ul class="ul clearfix">
+                    <li>
+                        <em>
+                            <a id="index" href='{% url "index" %}'>首页</a>
+                        </em>
+                    </li>
+                    <li>
+                        <em>
+                          <a id="about_house" href='{% url "about_house" %}'>关于DollGarden</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt> <a href='{% url "about_house"%}'>猫舍简介</a> </dt>
+                                    <dt> <a href='{% url "about_idea"%}'>我们的理念</a> </dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="cat_parents" href='{% url "cat_parents" %}'>种猫介绍</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt> <a href='{% url "cat_parents" %}'>爸爸妈妈</a> </dt>
+                                    <dt> <a href='{% url "cat_certificate" %}'>种猫证书</a> </dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="for_sale" href='{% url "for_sale" %}'>购买小猫</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt><a href='{% url "for_sale" %}'>待售小猫</a></dt>
+                                    <dt><a href='{% url "breed_plan" %}'>繁育计划</a></dt>
+                                    <dt><a href='{% url "price_range" %}'>定价范围</a></dt>
+                                    <dt><a href='{% url "pedigree_and_health" %}'>血统及健康保障 </a></dt>
+                                    <dt><a href='{% url "purchase_process" %}'>购买流程</a></dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="color_suit" href='{% url "color_suit" %}'>了解布偶</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt><a href='{% url "color_suit" %}'>布偶猫颜色及花色</a></dt>
+                                    <dt><a href='{% url "cat_profile" %}'>布偶猫简介</a></dt>
+                                    <dt><a href='{% url "breed_history" %}'>繁育历史</a></dt>
+                                    <dt><a href='{% url "phase_identification" %}'>品相鉴别</a></dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="history_pictures" href='{% url "history_pictures" %}'>图片展览</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt>
+                                        <a href='{% url "history_pictures" %}'><i></i>历史图片</a>
+                                    </dt>
+                                    <dt>
+                                        <a href='{% url "cat_new_home" %}'><i></i>猫咪在新家</a>
+                                    </dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="find_normal_house" href='{% url "find_normal_house" %}'>养猫学院</a>
+                        </em>
+                        <div class="sub">
+                            <div class="sub-menu">
+                                <dl>
+                                    <dt>
+                                        <a href='{% url "find_normal_house" %}'><i></i>寻找正规猫舍</a>
+                                    </dt>
+                                    <dt>
+                                        <a href='{% url "diet_manger" %}'><i></i>饮食管理</a>
+                                    </dt>
+
+                                    <dt>
+                                        <a href='{% url "behave_living" %}'><i></i>行为起居</a>
+                                    </dt>
+
+                                    <dt>
+                                        <a href='{% url "health_disease" %}'><i></i>保健与疾病</a>
+                                    </dt>
+
+                                    <dt>
+                                        <a href='{% url "others" %}'><i></i>其他分享</a>
+                                    </dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <em>
+                            <a id="contact" href='{% url "contact" %}'>联系我们</a>
+                        </em>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="top-search"> <a class="open-search" href="javascript:void(0);"></a>
+                <div class="search_box">
+                    <!--search-->
+                    <input type="text" class="text" id="TopKey" value="">
+                    <a id="TopBtn" class="btn" href="javascript:void(0);">GO</a>
+                    <!--search end-->
+                </div>
+            </div>
+        </div>
+    </header>
+        <script>
+            //打开搜索
+            $(".Top002434 .open-search").click(function(e) {
+                $(".Top002434 .search_box").stop(true, true).slideToggle();
+                $(document).on("click", function() {
+                    $(".Top002434 .search_box").stop(true, true).slideUp();
+                });
+                e.stopPropagation();
+            });
+            $(".Top002434 .search_box").on("click", function(e) {
+                e.stopPropagation();
+            });
+            //打开语言版本
+            $(".Top002434 .top-language dd").bind("mouseover", function() {
+                $(this).next("dt").stop(true, true).slideDown();
+            });
+            $(".Top002434 .top-language").bind("mouseleave", function() {
+                $(this).find("dt").stop(true, true).slideUp();
+            });
+            //搜索
+            $("#TopBtn").jqSearch({
+                TxtVal: "请输入关键词",
+                KeyTxt1: "输入关键词搜索！",
+                KeyTxt2: "输入的关键词字数不要过多！",
+                KeyTxt3: "您输入的内容存在特殊字符！",
+                KeyId: "TopKey", //输入框id
+                KeyUrl: "/search.aspx", //跳转链接
+                KeyHref: "key", //链接传值
+                Static: false //是否静态站
+            });
+            $(document).ready(function(){
+          $(window).scroll(function(){
+            if($(window).scrollTop() >= 130){
+               $('.Top002434').addClass('color');
+               $('.Top002434 .header-menu li em a').addClass('color_a');
+
+            } else{
+               $('.Top002434').removeClass('color');
+                $('.Top002434 .header-menu li em a').removeClass('color_a');
+            }
+            });
+         })
+      </script>
+</div>

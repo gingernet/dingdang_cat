@@ -1,0 +1,21 @@
+{% load staticfiles%}
+<div class="Banner002653">
+    <ul class="ul slides">
+        <li>
+            <a href=''><img src='{% static "image/102.jpg" %}' style="width:1903px;height:948px"></a>
+        </li>
+        <li><a href=''>
+            <img src='{% static "image/103.jpg" %}' style="width:1903px;height:948px"></a>
+        </li>
+        <li>
+            <a href=''><img src='{% static "image/104.jpg" %}' style="width:1903px;height:948px"></a>
+        </li>
+    </ul>
+    <script>
+		$(window).load(function() {
+			$('.Banner002653').flexslider({
+				slideshowSpeed: 6000
+			});
+		});
+	</script>
+</div>

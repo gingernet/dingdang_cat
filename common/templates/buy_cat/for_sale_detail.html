@@ -1,0 +1,60 @@
+{% extends "buy_cat/buy_cat.html" %}
+{% block buy_cat%}
+<div class="some_info">
+	<div class="auto auto_1200">
+
+        <div class="Floor002084" data-role="part">
+                <div class="auto">
+                    <div class="word">
+                        <div class="info">
+                            <h2>>海山双</h2>
+                            <h3>
+	<span><span style="font-size:16px;">预定请加微信：dollgarden</span></span>
+</h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <!--star-->
+                        <div class="design float">
+                            <ul class="ul">
+
+                                    <li>
+                                        <div class="Ispic" style="background-image:url( ../static/image/20190220130128128.jpg );">
+                                        	<img src="../static/picture/20190220130128128.jpg">
+                                        </div>
+                                    </li>
+
+                            </ul>
+                            <div class="pager">
+
+                                    <a href="javascript:;" class="Ispic" data-slide-index='0' style="background-image:url(../static/image/20190220130128128.jpg);"><img src="../static/picture/20190220130128128.jpg"></a>
+
+                            </div>
+                        </div>
+                        <!--end-->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $(".Floor002084 .pager a").each(function(index) {
+                            $(this).addClass("a_" + index);
+                            if (index == 0) {
+                                $(this).hide();
+                            }
+                        });
+                        $('.Floor002084 .box ul').bxSlider({
+                            auto: true,
+                            loop:true,
+                            pagerCustom: '.Floor002084 .box .pager',
+                            nextText: '<span class="glyphicon glyphicon-menu-right"></span>',
+                            prevText: '<span class="glyphicon glyphicon-menu-left"></span>',
+                            speed: 500
+                        });
+                    });
+
+                </script>
+            </div>
+    </div>
+</div>
+{% endblock %}
