@@ -51,7 +51,7 @@ urlpatterns = [
 
     path(r'cat_certificate', cat_certificate, name='cat_certificate'),
     path(r'cat_parents', cat_parents, name='cat_parents'),
-    path(r'cat_parents_detail', cat_parents_detail, name='cat_parents_detail'),
+    path(r'<int:cid>/cat_parents_detail', cat_parents_detail, name='cat_parents_detail'),
 
     path(r'for_sale', for_sale, name='for_sale'),
     path(r'for_sale_detail', for_sale_detail, name='for_sale_detail'),
@@ -79,5 +79,9 @@ urlpatterns = [
     path(r'legal_notices', legal_notices, name='legal_notices'),
     path(r'friends_link', friends_link, name='friends_link'),
 
-    path(r'contact', contact, name='contact')
+    path(r'contact', contact, name='contact'),
+
+    # plugin
+    path(r'ueditor', include('DjangoUeditor.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

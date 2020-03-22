@@ -5,15 +5,17 @@
         <div class="Floor001362" data-role="part">
             <div class="auto">
                 <ul class="ul">
+                    {% for item in cat_parent_list %}
                     <li>
-                        <a href='{% url "cat_parents_detail" %}'>
-                            <img class="pic" src="../static/picture/201908292019521952.jpg">
+                        <a href='{% url "cat_parents_detail"  item.id  %}'>
+                            <img class="pic" src="{% url 'index' %}media/{{ item.img }}">
                         </a>
                         <div class="icon">
-                            <h5 class="dot">Yummy - 海豹双色 | boy -</h5>
-                            <a href='{% url "cat_parents_detail" %}'>了解更多</a>
+                            <h5 class="dot">{{ item.name }} - {{ item.color }} | {{ item.sex }} -</h5>
+                            <a href='{% url "cat_parents_detail"  item.id %}'>了解更多</a>
                         </div>
                     </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

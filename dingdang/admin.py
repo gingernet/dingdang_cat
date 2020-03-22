@@ -1,3 +1,10 @@
-from django.contrib import admin
+#encoding=utf-8
 
-# Register your models here.
+from django.contrib import admin
+from dingdang.models import Banner
+
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'text_info', 'img', 'link_url', 'is_active')
+

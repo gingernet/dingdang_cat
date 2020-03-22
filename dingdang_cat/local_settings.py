@@ -37,9 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "common",
+    'DjangoUeditor',
+    'common',
+    'dingdang',
     'about',
-    'dingdang'
+    'buy_cat',
+    'cat_academy',
+    'cat_breed',
+    'cat_show',
+    'contact',
+    'understand_cat',
+    'website_info',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +87,7 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wenwo',
+        'NAME': 'dingdang',
         'USER': 'root',
         'PASSWORD': 'Wenwo2020',
         'HOST': '117.48.209.160',
