@@ -37,23 +37,12 @@
                 </div>
                 <script type="text/javascript">
                     $(document).ready(function() {
-                        /*
                         $(".Floor002084 .pager a").each(function(index) {
-
                             $(this).addClass("a_" + index);
                             if (index == 0) {
                                 $(this).hide();
                             }
                         });
-                        */
-                        img_ids = {{ img_ids }}
-                        for (var i=0; i < img_ids.length; i++) {
-                             $(".Ispics_" + img_ids[i]).addClass("a_" + img_ids[i]);
-                             if (img_ids[i] == img_ids[0]) {
-                                 $(this).hide();
-                             }
-                        }
-
                         $('.Floor002084 .box ul').bxSlider({
                             auto: true,
                             loop:true,

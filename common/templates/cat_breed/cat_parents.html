@@ -19,20 +19,32 @@
                 </ul>
             </div>
         </div>
-
         <div class="Page002545">
-                <div class='Pages'>
-                    <span class='p_page'>
-                        <a href='javascript:void(0);' class='a_first'>第一页</a>
-                        <a href='javascript:void(0);' class='a_prev'>上一页</a>
-                        <em class="num">
-                            <a href='list_4_page_1.html' class='a_cur' id='pageNum1'>1</a><a href='list_4_page_2.html' class='a_num' id='pageNum2'>2</a>
-                        </em>
-                        <a href='list_4_page_2.html' class='a_next'>下一页</a>
-                        <a href='list_4_page_2.html' class='a_end'>最后一页</a>
-                    </span>
-                </div>
-            <script type='text/javascript'> function redirectPage_(inputID){var inputValue = document.getElementById(inputID).value;     if(!(/^\d+$/).test(inputValue)){ document.getElementById(inputID).value = '1'; return; }      if(inputValue <= 0) { inputValue = 1; }      if(inputValue > 2) { inputValue = 2; }      location.href = '/bbmm/list_4_page_{$wtl_pager}.html'.replace('{$wtl_pager}', inputValue); } </script>
+            <div class='Pages'>
+                <span class='p_page'>
+                {% if cat_parent_list.has_previous %}
+                    <a href='?page={{ num }}' class='a_prev'>上一页</a>
+                {% else %}
+                    <a class='a_prev'></a>
+                {% endif %}
+                    {% for num in cat_parent_list.paginator.page_range %}
+                        {% if num %}
+                            <em class="num">
+                                <a class='a_cur' id='pageNum1'>{{ num }}</a>
+                            </em>
+                        {% else %}
+                            <em class="num">
+                                <a href='?page={{ num }}' class='a_cur' id='pageNum1'>...</a>
+                            </em>
+                        {% endif %}
+                    {% endfor %}
+                {% if cat_parent_list.has_next %}
+                    <a href='?page={{ num }}' class='a_next'>下一页</a>
+                {% else %}
+                    <a class='a_next'></a>
+                {% endif %}
+                </span>
+            </div>
         </div>
     </div>
 </div>
