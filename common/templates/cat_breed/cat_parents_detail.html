@@ -26,7 +26,7 @@
                             </ul>
                             <div class="pager">
                                 {% for item in cat_parent.imgs.all %}
-                                    <a href="javascript:;" class="Ispic Ispics_{{ item.id }}" data-slide-index={{ item.id }} style="background-image:url('{% url "index" %}media/{{ item.img }}');">
+                                    <a href="javascript:;" class="Ispic Ispics_{{ item.id }}" data-slide-index='0' style="background-image:url('{% url "index" %}media/{{ item.img }}');">
                                         <img src="{% url 'index' %}media/{{ item.img }}">
                                     </a>
                                 {% endfor %}

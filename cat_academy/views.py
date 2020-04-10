@@ -28,6 +28,7 @@ def others(request):
     focus_point = "others"
     return render(request, 'cat_academy/behave_living.html', locals())
 
+
 def find_normal_house_detail(request):
     focus_point = "find_normal_house"
     return render(request, 'cat_academy/find_normal_house_detail.html',locals())

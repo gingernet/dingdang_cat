@@ -28,7 +28,7 @@
         <p style="text-align:center;">
 	    <span style="font-size: 24px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
             <strong>
-                DollGarden深圳布偶猫舍
+                DollDingDang西安布偶猫舍
             </strong>
         </span>
     </p>
@@ -36,30 +36,39 @@
     <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
         推荐使用微信个人号，公众号回复不及时。
     </span>
-
     <div>
 	    <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
-            微信公众号：dollgarden-sz，个人号：DollGarden
+            微信公众号：{{ contract.num_public }}
+        </span>
+    </div>
+    <div>
+	    <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
+            微信号：{{ contract.num_weichat }}
+        </span>
+    </div>
+    <div>
+	    <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
+            QQ：{{ contract.num_qq }}
         </span>
     </div>
     <div>
         <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
-            新浪微博：DollGarden深圳布偶猫舍
+            新浪微博：{{ contract.sina_weibo }}
         </span>
     </div>
     <div>
         <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
-            邮箱：DollGarden@qq.com
+            邮箱：{{ contract.email }}
         </span>
     </div>
     <div>
         <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
-            电话：（+86）186 7637 9545
+            电话：（+86）{{ contract.phone }}
         </span>
     </div>
     <div>
         <span style="font-size: 16px; line-height: 2;" courier="" new";="" line-height:="" 2.5;"="" line-height:2;"="">
-            繁育人：Bella
+            繁育人：{{ contract.manager }}
         </span>
     </div>
     <br>
@@ -105,7 +114,7 @@
 			}
 			//标注点数组
 			var markerArr = [
-			    {title:"深圳布偶猫舍",content:"邮箱：DollGarden@qq.com<br/>电话：（+86）186&nbsp;7637&nbsp;9545<br/>繁育人：Bella<br/>地址：深圳南山区蛇口工业八路171号",point:"113.936832|22.505139",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+			    {title:"西安布偶猫舍",content:"邮箱：DollGarden@qq.com<br/>电话：（+86）186&nbsp;7637&nbsp;9545<br/>繁育人：Bella<br/>地址：深圳南山区蛇口工业八路171号",point:"113.936832|22.505139",isOpen:1,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
 		    ];
 			//创建marker
 			function addMarker(){
