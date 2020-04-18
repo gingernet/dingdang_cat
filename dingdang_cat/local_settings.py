@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'dingdang.views.global_variable'
             ],
         },
     },
@@ -89,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dingdang',
         'USER': 'root',
-        'PASSWORD': 'Zhiyu2019!',
+        'PASSWORD': 'Zhiyuxing2019!',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
