@@ -7,53 +7,31 @@ from dingdang.models import BaseModel
 
 
 class Category(BaseModel):
-    name = models.CharField(max_length=100)
+    name = models.CharField("名称",max_length=100)
     index = models.IntegerField(default=999)
 
     class Meta:
-        pass
-
-    def __str__(self):
-        return self.name
-
-
-class Tag(BaseModel):
-    name = models.CharField(max_length=100)
-
-    class Meta:
-        pass
-
-    def __str__(self):
-        return self.name
-
-
-class Tui(BaseModel):
-    name = models.CharField(max_length=100)
-
-    class Meta:
-        pass
+        verbose_name = "养猫学院类别"
+        verbose_name_plural = "养猫学院类别"
 
     def __str__(self):
         return self.name
 
 
 class Article(BaseModel):
-    title = models.CharField(max_length=70)
-    excerpt = models.TextField(max_length=200, blank=True)
+    title = models.CharField("标题", max_length=70)
+    excerpt = models.TextField("摘要", max_length=200, blank=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING, blank=True, null=True)
-    tags = models.ManyToManyField(Tag, blank=True)
-    img = models.ImageField(upload_to='article_img/%Y/%m/%d/', blank=True, null=True)
-    body = UEditorField(width=800, height=500,
-                            toolbars="full", imagePath="upimg/", filePath="upfile/",
-                            upload_settings={"imageMaxSize": 1204000},
-                            settings={}, command=None, blank=True
+    img = models.ImageField("封面图片", upload_to='article_img/%Y/%m/%d/', blank=True, null=True)
+    body = UEditorField("文章内容", width=800, height=500,
+                        settings={}, command=None, blank=True
                         )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    views = models.PositiveIntegerField(default=0)
-    tui = models.ForeignKey(Tui, on_delete=models.DO_NOTHING, blank=True, null=True)
+    views = models.PositiveIntegerField("查看次数", default=0)
 
     class Meta:
-       pass
+        verbose_name = "养猫文章"
+        verbose_name_plural = "养猫文章"
 
     def __str__(self):
         return self.title

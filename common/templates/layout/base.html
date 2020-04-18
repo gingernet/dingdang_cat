@@ -34,14 +34,12 @@
 {% endblock %}
 {% include 'layout/bottom.html' %}
 <script type="text/javascript" language="javascript">
+    console.log("{{ focus_point }}");
+    console.log({{ focus_point }});
     jQuery("#{{ focus_point }}").addClass("on");
 </script>
-{#<script type="text/javascript">#}
-{#	jQuery.each(jQuery("img"), function (i, n) { jQuery(n).error(function () { n.src = '/uploadfiles/nopic.jpg'; }); n.src = n.src; })#}
-{#</script>#}
 <script type="text/javascript">
     focus_id = "{{ focus_point }}";
-    console.log(focus_id)
     if(focus_id === 'index'){
         $("#index").css("color","#352a2a");
     }
